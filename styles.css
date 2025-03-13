@@ -1,0 +1,458 @@
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Stellt sicher, dass der Body die gesamte Höhe einnimmt */
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    -ms-overflow-style: none;  /* IE und Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow-y: auto; /* Erlaubt Scrollen */
+    height: auto;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: top 0.3s ease-in-out; /* Sanfte Bewegung */
+    z-index: 9999; /* Stellt sicher, dass die Navbar immer im Vordergrund bleibt */
+}
+
+
+/* Snap-Scrolling konfigurieren */
+body {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px; /* Puffer oben für das erste Element */
+    background-color: #ededed!important;
+}
+
+/* Sektionen mit Scroll-Snap konfigurieren */
+.start, .vorstellung {
+    scroll-snap-align: start;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Hintergrundbilder */
+.start {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+    url('Bilder/Background_start.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* scroll */
+    /* todo */
+/* scroll */
+
+.vorstellung {
+    background-image: url('Bilder/Background_vorstellung.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* Startseite Layout */
+.start {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 5%;
+    padding-top: 25vh;
+    gap: 20px;
+}
+
+.start button {
+    width: 15vw;
+    margin-top: 20px;
+}
+
+@media (max-width: 1100px) {
+    .start button {
+        width: 25vw;
+    }
+}
+
+@media (max-width: 660px) {
+    .start button {
+        width: 44vw;
+    }
+}
+
+
+#text_start {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 350px) {
+    #h1text_start {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+}
+
+#h2text_start {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+/* Card Design */
+.cards {
+    position: relative;
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 15px;
+}
+
+.glass {
+    position: relative; /* Wichtig für absolutes Positionieren des Overlays */
+    height: 125px;
+    width: 350px;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 25px 45px rgba(0, 0, 0, .2);
+    border-radius: 30px;
+    border: 1.5px solid rgba(255, 255, 255, .5);
+    border-right: 2px solid rgba(255, 255, 255, .2);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    overflow: hidden; /* Verhindert, dass das Gradient außerhalb ragt */
+    flex-wrap: nowrap;
+}
+
+/* Gradient als Overlay */
+.gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(160, 157, 157, 0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: scale(1) ;
+    overflow: visible;
+    border-radius: 30px; /* Rundungen beibehalten */
+}
+
+/* Animation beim Hover */
+.glass:hover .gradient {
+    opacity: 0.5;
+    transform: scale(1.5);
+}
+
+.glass i {
+    font-size: 35px; /* Icon-Größe */
+    color: rgb(225, 220, 220); /* Falls dunkler Hintergrund */
+}
+
+.glass p {
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Falls heller Hintergrund */
+}
+
+ @media (max-width: 768px) {
+    .cards {
+        display: none;
+    }
+}
+
+
+/* v  vorstellung  v */
+
+.glow_text {
+    position: relative;
+    left: 73%;
+    top: -10%;
+    font-size: clamp(13px, 2vw, 16px);
+}
+
+.glow {
+    position: relative;
+    left: 80%;
+    top: 10%;
+
+    width: 250px;
+    height: 270px;
+    background-color: rgba(255, 255, 255, 0.098); /* Heller Kreis */
+    border-radius: 90%;
+    filter: blur(40px); /* Weicher Effekt */
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.073); /* Extra Glow */
+
+    animation: float 5s ease-in-out infinite; /* Animation anwenden */
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateX(-50%) translateY(0); /* Anfangszustand */
+    }
+    50% {
+        transform: translateX(-50%) translateY(-40px); /* Bewegung nach oben */
+    }
+    100% {
+        transform: translateX(-50%) translateY(0); /* Zurück zum Anfang */
+    }
+}
+
+
+/* Position der linken Checkliste */
+.text_vorstellung {
+    margin-left: 7%;
+    margin-top: 10%;
+    font-size: clamp(13px, 2vw, 18px);
+}
+
+@media (max-width: 950px) {
+    .glow_text{
+        left: 60%;
+    }
+    .glow{
+        left: 72%;
+    }
+}
+
+@media (max-width: 700px) {
+    .glow_text{
+        left: 60%;
+    }
+    .glow{
+        left: 72%;
+    }
+
+    .text_vorstellung{
+        margin-top: 35%;
+    }
+}
+
+@media (max-width: 500px) {
+    .glow_text{
+        left: 30%;
+        top: -25%;
+    }
+    .glow{
+        left: 55%;
+        top: 0%;
+    }
+
+    .text_vorstellung{
+        margin-top: 55%;
+        text-align: center;
+    }
+}
+
+
+
+/* v  produkte  v */
+
+.titel_produkte{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(17px, 4vw, 30px);
+    margin-top: 10%;
+}
+
+ @media (max-width: 500px) {
+ .titel_produkte{
+    margin-top: 15%;
+    
+ }
+}
+
+ /* v   text scroll  v */
+
+.text-scroll-container {
+    width: 100%;
+    overflow: hidden; /* Keine Scrollbalken */
+    white-space: nowrap; /* Kein automatischer Umbruch */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Abstand zwischen den Zeilen */
+    font-size: clamp(14px, 1.3vw, 20px); /* Automatische Schriftgrößen-Anpassung */
+    font-weight: bold;
+    color: #888; /* Grauer Text */
+    opacity: 0.7;
+    filter: blur(.25px); /* Leicht verschwommener Effekt */
+    margin-top: 5%;
+
+}
+
+/* Gemeinsame Einstellungen für alle Zeilen */
+.text-row {
+    display: flex;
+    white-space: nowrap;
+    animation-timing-function: linear;
+    will-change: transform;
+}
+
+/* Erste Zeile: Sehr langsam */
+.text-row-1 {
+    animation: scroll-text 40s linear infinite;
+}
+
+/* Zweite Zeile: Mittel langsam, in die andere Richtung */
+.text-row-2 {
+    animation: scroll-text-reverse 50s linear infinite;
+}
+
+/* Dritte Zeile: Etwas schneller */
+.text-row-3 {
+    animation: scroll-text 45s linear infinite;
+}
+
+/* Keyframes für die Bewegung (links nach rechts) */
+@keyframes scroll-text {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Keyframes für die umgekehrte Bewegung (rechts nach links) */
+@keyframes scroll-text-reverse {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+/* ende text scroll */
+
+/* cards */
+.carousel{
+    margin-top: 5%!important;
+}
+
+#carouselDemo {
+    object-fit: cover; /* sorgt dafür, dass das Bild den Container ausfüllt */
+}
+
+.carousel-inner img {
+    height: 60vh;
+    object-fit: cover; /* sorgt dafür, dass das Bild den Container richtig ausfüllt */
+}
+
+
+.all-products-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(134, 136, 139, 0.8);
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+    .all-products-btn {
+        position: static;
+        bottom: -400px;
+        right: -10px!important;
+        margin-top: 5px;
+    }
+    .beschreibung_carousel{
+        display: none;
+    }
+}
+
+
+
+.all-products-btn:hover {
+    background-color: rgba(0, 123, 255, 1);
+}
+/* cards */
+
+
+/* kontakt */
+.kontakt{
+    
+    padding-bottom: 13%;
+}
+.kontakt h2 {
+    padding-top: 13%; /* Abstand nach unten vergrößern */
+}
+.no-underline {
+    text-decoration: none !important; /* Entfernt den Unterstrich */
+    color: rgb(84, 83, 83) !important; /* Ändert die Farbe auf Schwarz */
+}
+
+.no-underline:hover {
+    color: rgb(0, 0, 0) !important; /* Optional: Farbe beim Hover ändern */
+}
+.form-control:focus {
+    border-color: #007bff; /* Blaue Umrandung beim Fokus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+/* ende kontakt */
+
+
+/* footer */
+.footer {
+    background-color: white;
+    border-top: 1px solid white;
+    margin-top: 40px;
+}
+
+
+.footer-logo {
+    height: 40px;
+}
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+#copyright{
+    padding-top:20px;
+}
+
+/* responsive footer */
+@media (max-width: 770px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px; /* Abstand zwischen den Elementen */
+    }
+
+    .footer nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Abstand zwischen Links */
+        margin-top: 20px;
+    }
+
+    .footer .btn {
+        margin-top: 20px!important;
+        margin-bottom: 25px;
+    }
+}
+
+/* ende footer */
