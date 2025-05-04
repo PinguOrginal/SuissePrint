@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SuissePrint</title>
-    <link rel="icon" type="image/x-icon" href="/Bilder/v3-logo_v1-symbol.svg">
+    <title>SwissPrint3D</title>
+    <link rel="icon" type="image/x-icon" href="Bilder/v3-logo_v1-symbol.svg">
 
 
     <link rel="stylesheet" href="styles.css">
@@ -21,7 +21,7 @@
             <div class="container-fluid m-1">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
-                    <img src="Bilder/v3-logo_v2-color.svg" alt="Logo" width="auto" height="40" class="d-inline-block align-text-top">
+                    <img src="Bilder/logo1-schwarz.svg" alt="Logo" width="auto" height="30" class="d-inline-block align-text-top">
                 </a>
                 <!---Button für mobile Ansicht -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,16 +34,16 @@
                             <a class="nav-link active" aria-current="page" href="#">Startseite</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Produkte</a>
+                            <a class="nav-link" href="./produkte.html">Produkte</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Angebot</a>
+                            <a class="nav-link" href="./bald.html">Angebot</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Kontakt</a>
+                            <a class="nav-link" href="#kontakt_scroll">Kontakt</a>
                         </li>
                     </ul>
-                        <a href="/Kontakt">
+                        <a href="#kontakt_scroll">
                             <button type="button" class="btn btn-primary ms-lg-5 mt-lg-0 mt-3" 
                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 1rem;">
                             Fangen wir an!
@@ -59,7 +59,7 @@
     <div class="start">
         <h1 id="h1text_start"><strong>PRINT THE <br>FUTURE</strong></h1>
         <h2 id="h2text_start">Wir fertigen deine Teile im FFF-Druck verfahren!</h2>
-        <button type="button" class="btn btn-light">Kontakt aufnehmen</button>
+        <a href="#kontakt_scroll"><button type="button" class="btn btn-light">Kontakt aufnehmen</button></a>
 
         <div class="cards">
             <div class="glass">
@@ -134,44 +134,42 @@
 
 
         <!-- cards -->
-    <div class="carousel slide" 
+    <div class="carousel slide shadow-inset" 
     id="carouselDemo"
     data-bs-wrap="true" 
     data-bs-ride="carousel">
     
         <div class="carousel-inner">
-    
-            <div class="carousel-item active">
-                <img src="/Bilder/Background_start.jpg" class="w-100">
+            <div class="carousel-item active bg-grey">
+                <div class="d-flex justify-content-center align-items-center h-90">
+                    <img src="Bilder/Schlauchmanschette_transparent3.png" class="carousel-img">
+                </div>
                 <div class="carousel-caption">
                     <h5>Schlauchmanschette</h5>
-                    <p class="beschreibung_carousel">
-                        zum Einbinden von Spiralschläuchen
-                    </p>
-                    <a href="/produkte.html" class="btn btn-secondary all-products-btn">Alle Produkte</a>
+                    <p class="beschreibung_carousel">zum Einbinden von Spiralschläuchen</p>
+                    <a href="./produkte.html" class="btn btn-secondary all-products-btn">Alle Produkte</a>
                 </div>
             </div>
     
-            <div class="carousel-item " 
-            data-bs-interval="2000">
-                <img src="/Bilder/Background_start2.jpg" class="w-100">
+            <div class="carousel-item" data-bs-interval="2000">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                <img src="Bilder/spezialschlüssel1.png" class="carousel-img">
                 <div class="carousel-caption">
-                    <h5>Bilder folgen...</h5>
-                    <p class="beschreibung_carousel">
-
-                    </p>
-                    <a href="/produkte.html" class="btn btn-secondary all-products-btn">Alle Produkte</a>
+                    <h5>Spezialschlüssel</h5>
+                    <p class="beschreibung_carousel">Zum festziehen von Sternschrauben</p>
+                    <a href="./produkte.html" class="btn btn-secondary all-products-btn">Alle Produkte</a>
+                </div>
                 </div>
             </div>
     
             <div class="carousel-item ">
-                <img src="/Bilder/Background_vorstellung.jpg" class="w-100">
+                <img src="#" class="w-100">
                 <div class="carousel-caption">
                     <h5>Bilder folgen...</h5>
                     <p class="beschreibung_carousel">
 
                     </p>
-                    <a href="/produkte.html" class="btn btn-secondary all-products-btn">Alle Produkte</a>
+                    <a href="./produkte.html" class="btn btn-secondary all-products-btn">Alle Produkte</a>
                 </div>
             </div>
     
@@ -216,14 +214,14 @@
 
 
 
-    <div class="kontakt">
+    <div class="kontakt" id="kontakt_scroll">
         <!-- form -->
         <div class="text-center">
             <h2>Kontaktiere uns!</h2>
-            <a href="mailto:info@suisseprint.ch" target="_blank" class="no-underline">info@suisseprint.ch</a>
+            <a href="mailto:info@swissprint3D.ch" target="_blank" class="no-underline">info@swissprint-3d.ch</a>
         </div>
         <div class="container mt-5">
-            <form>
+            <form action="https://hooks.airtable.com/workflows/v1/genericWebhook/appmwl7PxI9IGOHGv/wflMfJnbi2LDIlu7H/wtroRmzfMq5Knln90" method="POST" enctype="multipart/form-data">
               <div class="row">
                 <!-- Name Feld -->
                 <div class="col-md-6">
@@ -275,7 +273,7 @@
               </div>
 
             <div class="mb-3">
-                <label for="formFileMultiple" class="form-label">Datei Upload - Laden sie alle Modelle gleichzeitig hoch</label>
+                <label for="formFileMultiple" class="form-label">Datei Upload - Laden Sie alle Modelle gleichzeitig hoch</label>
                 <input class="form-control" type="file" id="formFileMultiple" multiple>
               </div>
 
@@ -298,17 +296,16 @@
     <div class="footer">
         <footer class="footer text-center">
             <div class="container d-flex justify-content-between align-items-center">
-                <img src="Bilder/v3-logo_v2-color.svg" alt="Logo" class="footer-logo">
+                <img src="Bilder/logo1-schwarz.svg" alt="Logo" class="footer-logo">
                 <nav>
-                    <a href="#" class="me-3">Startseite</a>
-                    <a href="#" class="me-3">Produkte</a>
-                    <a href="#" class="me-3">Angebot</a>
-                    <a href="#" class="me-3">Gallery</a>
-                    <a href="#">Team</a>
+                    <a href="./index.html" class="me-3">Startseite</a>
+                    <a href="./produkte.html" class="me-3">Produkte</a>
+                    <a href="./bald.html" class="me-3">Angebot</a>
+                    <a href="#kontakt_scroll" class="me-3">Kontakt</a>
                 </nav>
                 <div>
                     <span>Let's do it! –</span>
-                    <a href="#" class="btn btn-primary text-white" style="text-decoration: none;">Kontakt aufnehmen</a>
+                    <a href="#kontakt_scroll" class="btn btn-primary text-white" style="text-decoration: none;">Kontakt aufnehmen</a>
                 </div>
             </div>
             <div class="text-center mt-3">

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SwissPrint3D</title>
+    <link rel="icon" type="image/x-icon" href="Bilder/v3-logo_v1-symbol.svg">
+
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+  <body>
+
+    <header>
+        <nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary bg-white ">
+            <div class="container-fluid m-1">
+                <!-- Logo -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="Bilder/logo1-schwarz.svg" alt="Logo" width="auto" height="30" class="d-inline-block align-text-top">
+                </a>
+                <!---Button für mobile Ansicht -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <!-- Navigationsmenü -->
+                <div class="collapse navbar-collapse text-center justify-content-end mt-4" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Startseite</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./produkte.html">Produkte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./bald.html">Angebot</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html#kontakt_scroll">Kontakt</a>
+                        </li>
+                    </ul>
+                        <a href="./index.html#kontakt_scroll">
+                            <button type="button" class="btn btn-primary ms-lg-5 mt-lg-0 mt-3" 
+                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 1rem;">
+                            Fangen wir an!
+                            </button>
+                        </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container py-5">
+          <h1 class="text-center mb-4" style="margin-top: 10%;"><strong>Unsere Produkte</strong></h1>
+          <p class="text-center mb-5">Entdecke unsere hochwertigen Produkte – ideal für Deine Anforderungen.</p>
+      
+          <div class="row justify-content-center mt-5">
+            <div class="col-md-4 mb-4">
+              <div class="card shadow-sm border-light h-100">
+                <img src="./Bilder/schlauchmanschette_1.png" alt="Produkt 1" class="card-img-top" style="object-fit: cover; height: 250px;">
+                <div class="card-body d-flex flex-column text-center">
+                  <h5 class="card-title"><strong>Schlauchmanschette</strong></h5>
+                  <p class="card-text">Die clevere Lösung zum Einbinden von Spiralschläuchen.</p>
+                  <a href="./produkte/schlauchmanschette.html" class="btn btn-secondary mt-auto">Jetzt kaufen</a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-4 mb-4">
+              <div class="card shadow-sm border-light h-100">
+                <img src="./Bilder/Spezialschlüssel_techn.png" alt="Produkt 2" class="card-img-top" style="object-fit: cover; height: 250px;">
+                <div class="card-body d-flex flex-column text-center">
+                  <h5 class="card-title"><strong>Spezialschlüssel</strong></h5>
+                  <p class="card-text">Der kleine helfer zum Anziehen und Lösen von Sternmuttern/ Schrauben</p>
+                  <a href="./produkte/spezialschlüssel.html" class="btn btn-secondary mt-auto">Jetzt kaufen</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <p class="text-center text-muted mt-5">Mehr Produkte folgen...</p>
+        </section>
+      </main>
+
+
+    <div class="footer">
+        <footer class="footer text-center">
+            <div class="container d-flex justify-content-between align-items-center">
+                <img src="Bilder/logo1-schwarz.svg" alt="Logo" class="footer-logo">
+                <nav>
+                    <a href="./index.html" class="me-3">Startseite</a>
+                    <a href="./produkte.html" class="me-3">Produkte</a>
+                    <a href="./bald.html" class="me-3">Angebot</a>
+                    <a href="./index.html#kontakt_scroll" class="me-3">Kontakt</a>
+                </nav>
+                <div>
+                    <span>Let's do it! –</span>
+                    <a href="./index.html#kontakt_scroll" class="btn btn-primary text-white" style="text-decoration: none;">Kontakt aufnehmen</a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <div  id="copyright"><small>&copy; 2025 All Rights Reserved</small></div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
