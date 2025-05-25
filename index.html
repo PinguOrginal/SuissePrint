@@ -221,71 +221,59 @@
             <a href="mailto:info@swissprint3D.ch" target="_blank" class="no-underline">info@swissprint-3d.ch</a>
         </div>
         <div class="container mt-5">
-            <form action="https://formspree.io/f/mvgajrve" method="POST">
-              <div class="row">
-                <!-- Name Feld -->
-                <div class="col-md-6">
-                  <div class="form-group mb-4">
-                    <label for="name">Name*</label>
-                    <input type="text" class="form-control" id="name" placeholder="Max">
-                  </div>
-                </div>
-          
-                <!-- Nachname Feld -->
-                <div class="col-md-6">
-                  <div class="form-group mb-4">
-                    <label for="nachname">Nachname*</label>
-                    <input type="text" class="form-control" id="nachname" placeholder="Mustermann">
-                  </div>
-                </div>
-              </div>
 
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">E-Mail Adresse*</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-          
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Adresszeile</label>
-                <textarea class="form-control" id="Adresszeile" rows="1"></textarea>
-              </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group mb-4">
-                  <label for="postleitzahl">Postleitzahl</label>
-                  <input type="text" class="form-control" id="Postleitzahl">
-                </div>
-              </div>
-        
-              <div class="col-md-6">
-                <div class="form-group mb-4">
-                  <label for="nachname">Stadt</label>
-                  <input type="text" class="form-control" id="stadt">
-                </div>
-              </div>
+        <form action="https://formspree.io/f/mvgajrve" method="POST">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+            <label for="name">Name*</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Max" required>
             </div>
- 
+            <div class="col-md-6 mb-4">
+            <label for="nachname">Nachname*</label>
+            <input type="text" class="form-control" id="nachname" name="nachname" placeholder="Mustermann" required>
+            </div>
+        </div>
 
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Land/Region</label>
-                <textarea class="form-control" id="land" rows="1"></textarea>
-              </div>
+        <div class="mb-3">
+            <label for="email">E-Mail Adresse*</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+        </div>
 
-            <div class="mb-3">
+        <div class="mb-3">
+            <label for="adresse">Adresszeile</label>
+            <textarea class="form-control" id="adresse" name="adresse" rows="1"></textarea>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+            <label for="plz">Postleitzahl</label>
+            <input type="text" class="form-control" id="plz" name="postleitzahl">
+            </div>
+            <div class="col-md-6 mb-4">
+            <label for="stadt">Stadt</label>
+            <input type="text" class="form-control" id="stadt" name="stadt">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="land">Land/Region</label>
+            <textarea class="form-control" id="land" name="land" rows="1"></textarea>
+        </div>
+
+        <!-- ACHTUNG: Datei-Upload nur mit Pro-Version -->
+         <!-- <div class="mb-3">
                 <label for="formFileMultiple" class="form-label">Datei Upload - Laden Sie alle Modelle gleichzeitig hoch</label>
                 <input class="form-control" type="file" id="formFileMultiple" multiple>
-              </div>
+              </div> -->
+        <!-- Entfernt -->
 
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Bemerkung* - Stückzahl</label>
-                <textarea class="form-control" id="Bemerkung" rows="3" placeholder="Was möchten Sie uns mitteilen?"></textarea>
-              </div>
-    
-            
-              <!-- Submit Button -->
-              <button type="submit" class="btn btn-primary">Absenden</button>
-            </form>
+        <div class="mb-3">
+            <label for="bemerkung">Bemerkung* - Stückzahl</label>
+            <textarea class="form-control" id="bemerkung" name="bemerkung" rows="3" placeholder="Was möchten Sie uns mitteilen?" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Absenden</button>
+        </form>
           </div>
 
         </div>
